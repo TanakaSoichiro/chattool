@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Test chat tool</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+    </head>
+    <body>
+        <header>
+            <!-- 自ユーザーが見えるところ -->
+            <div id="my">GUST</div>
+            <!-- ログイン/ログアウトボタン -->
+            <section class="in_out">
+                <input type="button" id="login"value="ログイン">
+                <!-- <div id="logout">ログアウト</div> -->
+                <input type="button" id="logout" value="ログアウト" onclick="signOut()" />
+            </section>
+
+                
+        </header>
+
+        <section>
+            <!-- 書いた内容が出るところ -->
+            <div id="history">
+                <!-- コメント履歴 -->
+                <div id="your_bubble">
+                    <div id="your_speak">あ、どうも。：小野妹子</div>
+                </div>
+            </div>
+            <!-- 編集/削除ボタン -->
+            <div id="edit">編集</div>
+            <div id="delete">削除</div>   
+            <!-- 書くところ -->
+            <form>
+                <textarea rows="3" cols="50" wrap="hard" class="left" type="text" id="inputtext" placeholder="ここに入力" value=""></textarea>
+            </form>
+            <!-- 送信ボタン -->
+            <section id="s_e_toggle">
+                <input type="button" class="left" id="send" value="送信">
+            </section>
+        </section>
+
+        <section id="delete_q">
+        </section>
+        <!-- ログイン時画面 -->
+        <div id="push_login">
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
